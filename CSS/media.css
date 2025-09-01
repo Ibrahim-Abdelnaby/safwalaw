@@ -1,0 +1,13 @@
+/* Small devices */
+@media screen and (max-width: 576px) {
+  #hero .top-header {
+    display: none;
+  }
+  #hero .bottom-header {
+    margin-inline: 1rem;
+  }
+  #hero .bottom-header nav,
+  #hero .bottom-header .primary-btn {
+    display: none;
+  }
+}

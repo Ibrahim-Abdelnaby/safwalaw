@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+:root {
+  --primary-color: #162820;
+  --secondary-color: #bebfa8;
+}
+#hero {
+  height: 100vh;
+  background: url("../images/hero-img.webp") center/cover no-repeat;
+  position: relative;
+}
+#hero .bg-overlay {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 50%;
+  background-image: url("../images/logo-overlay.webp");
+  --animate-duration: 1s;
+}
+#hero header {
+  position: relative;
+  z-index: 10;
+  --animate-duration: 1s;
+}
+#hero .top-header {
+  font-size: 0.9rem;
+  direction: ltr;
+  padding-top: 1rem;
+  color: var(--secondary-color);
+}
+#hero .top-header .social {
+  gap: 1rem;
+}
+#hero nav {
+  position: relative;
+  right: 50px;
+}
+#hero nav ul > * {
+  font-weight: 600;
+}
+#hero nav ul > .active {
+  font-weight: 600;
+  position: relative;
+}
+#hero nav ul > .active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: #162820;
+}
+#hero .bottom-header .banner {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+#hero .hero-content {
+  position: absolute;
+  inset: 0 0 0 0;
+  text-align: center;
+}
+#hero .hero-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+}
+#hero .hero-content p {
+  color: var(--secondary-color);
+}
+#hero .hero-content h1,
+#hero .hero-content p {
+  width: 90%;
+  margin: 0 auto 2rem;
+}
+
+#hero .hero-content p {
+  width: 70%;
+}
+
+#hero .animate__animated.animate__fadeIn {
+  --animate-duration: 5s;
+}
+
+/* About Section */
+#about {
+  padding: 7rem 0;
+}
+#about .about-overview,
+#about .about-values {
+  gap: 5rem;
+}
+#about .about-overview {
+  margin-bottom: 3rem;
+}
+#about .about-img {
+  width: 50%;
+  position: relative;
+}
+#about .about-img .back-bg {
+  background-color: #bebfa8;
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 30%;
+  height: 100%;
+}
+
+#about .about-img .front-bg {
+  background-image: url("../images/about-img.jpg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  top: 15px;
+  bottom: 0;
+}
+
+#about .about-text {
+  width: 50%;
+}
+#about .about-title {
+  margin-bottom: 2rem;
+}
+#about .about-content {
+  color: var(--secondary-color);
+}
+#about .about-values > * {
+  width: 50%;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  padding: 1rem 5rem 1rem 1rem;
+}
+#about .our-vision,
+#about .our-values {
+  position: relative;
+}
+#about .our-vision h3,
+#about .our-values h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+#about .our-vision p,
+#about .our-values p {
+  color: var(--secondary-color);
+}
+#about .icon-box {
+  position: absolute;
+  background-color: var(--secondary-color);
+  top: 6rem;
+  right: -5.5rem;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Success Partners */
+#partner {
+  padding: 5rem 0;
+}
+#partner .partner {
+  background-color: #fff;
+  padding: 2rem 1rem;
+  width: 250px;
+  height: 150px;
+  border-radius: 1rem;
+}
+#partner .partner-title {
+  margin-bottom: 2rem;
+}
+
+/* Contact */
+#contact .map {
+  background-color: #fff;
+  height: 400px;
+  position: relative;
+}
+#contact .map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* contact info */
+
+#contact .contact-info {
+  background-color: var(--secondary-color);
+  border-radius: 1rem;
+  width: 1000px;
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  transform: translate(50%, 50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 4rem 3rem;
+}
+#contact .contact-info .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#contact .contact-info .contact i {
+  margin-bottom: 1rem;
+}
+#contact .contact-info .contact h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Meeting */
+#meeting {
+  margin-bottom: 5rem;
+}
+#meeting .partner-title {
+  margin-top: calc(195px / 2);
+  margin-bottom: 2rem;
+  padding-top: 10rem;
+}
+#meeting .form-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+#meeting .form-row > * {
+  flex: 0 1 50%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1rem;
+  border: 1px solid var(--secondary-color);
+}
+#meeting .form-row textarea {
+  flex-basis: 100%;
+  height: 200px;
+}
+
+/* Footer */
+footer {
+  padding: 5rem 5rem 0;
+  background-color: var(--primary-color);
+  border-top: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+footer .container {
+  padding-bottom: 5rem;
+  border-bottom: 1px solid rgba(190, 191, 168, 0.15);
+}
+footer .container > * {
+  flex: 0 1 calc(33.3% - 1rem);
+}
+footer .company-info {
+  align-items: flex-start;
+}
+footer .company-info p {
+  margin: 2rem 0;
+}
+
+footer h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4.2rem;
+}
+
+footer .contact-info a {
+  display: block;
+  margin-bottom: 1rem;
+}
+footer .working-hours .right > *:not(:last-child),
+footer .working-hours .left > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.copywrite {
+  text-align: center;
+  padding: 2rem;
+}
