@@ -3,6 +3,11 @@
   --primary-color: #162820;
   --secondary-color: #bebfa8;
 }
+.strong {
+  font-weight: 700;
+  color: white;
+  font-size: large;
+}
 #hero {
   height: 100vh;
   background: url("../images/hero-img.webp") center/cover no-repeat;
@@ -49,12 +54,22 @@
   height: 2px;
   background-color: #162820;
 }
-#hero .bottom-header .banner {
+.bottom-header {
+  position: fixed;
+  top: 40px; /* Default top value */
+  width: 1440px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  transition: top 0.3s ease; /* Smooth transition for top changes */
+}
+.bottom-header .banner {
   background-color: var(--secondary-color);
   padding: 1rem;
   margin-top: 1rem;
   border-radius: 5px;
 }
+
 #hero .hero-content {
   position: absolute;
   inset: 0 0 0 0;
@@ -276,7 +291,7 @@ footer .working-hours .right > *:not(:last-child),
 footer .working-hours .left > *:not(:last-child) {
   margin-bottom: 1rem;
 }
-.copywrite {
+copywrite {
   text-align: center;
   padding: 2rem;
 }

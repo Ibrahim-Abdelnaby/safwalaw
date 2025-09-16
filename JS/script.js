@@ -94,3 +94,20 @@ for (let i = 0; i < thirdServices.length; i++) {
             </div>`;
 }
 thirdGrid.innerHTML = thirdCartona;
+
+document.addEventListener("DOMContentLoaded", function () {
+  const bottomHeader = document.querySelector(".bottom-header");
+  const heroSection = document.querySelector("header");
+
+  window.addEventListener("scroll", function () {
+    const heroBottom = heroSection.getBoundingClientRect().bottom;
+
+    if (heroBottom <= 0) {
+      // When the user scrolls past the hero section
+      bottomHeader.style.top = "0px";
+    } else {
+      // When the user is in the hero section
+      bottomHeader.style.top = "40px";
+    }
+  });
+});
