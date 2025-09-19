@@ -291,7 +291,10 @@ footer .working-hours .right > *:not(:last-child),
 footer .working-hours .left > *:not(:last-child) {
   margin-bottom: 1rem;
 }
-copywrite {
+.copywrite {
   text-align: center;
   padding: 2rem;
+}
+.rajhi {
+  background-color: #d1d1d1 !important;
 }
