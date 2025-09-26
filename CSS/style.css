@@ -78,7 +78,7 @@
 #hero .hero-content h1 {
   font-size: 4rem;
   font-weight: 800;
-  color: white;
+  color: var(--secondary-color);
 }
 #hero .hero-content p {
   color: var(--secondary-color);
@@ -297,4 +297,15 @@ footer .working-hours .left > *:not(:last-child) {
 }
 .rajhi {
   background-color: #d1d1d1 !important;
+}
+.navhiddin {
+  display: none;
+}
+.modal-hiddin {
+  display: none;
+}
+#hero header {
+  position: absolute;
+  top: 0;
+  width: 100%;
 }

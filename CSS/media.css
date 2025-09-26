@@ -1,3 +1,595 @@
+/* 1. Make images responsive */
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+#meeting .form-row > * {
+  flex: 0 1 100%;
+}
+#meeting .secondary-btn {
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+@media (min-width: 993px) {
+  #about .about-values {
+    flex-wrap: nowrap;
+  }
+}
+#about .about-values {
+  flex-basis: 50%;
+  flex-direction: row;
+
+  width: 100%;
+}
+#about .about-values > * {
+  width: 50%;
+}
+/* 2. Responsive containers */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2vw;
+  margin: 0 auto;
+}
+
+/* 3. Responsive typography */
+html {
+  font-size: 16px;
+}
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 4. Flex/grid adjustments */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-col {
+  flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
+}
+.align-items {
+  align-items: center;
+}
+.gap-10 {
+  gap: 10px;
+}
+.gap-5 {
+  gap: 5px;
+}
+
+/* 5. Responsive navigation */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+nav ul li {
+  margin: 0;
+}
+nav ul li a {
+  padding: 0.5em 1em;
+  display: block;
+}
+
+/* 6. Responsive buttons */
+.primary-btn,
+.secondary-btn {
+  padding: 0.75em 2em;
+  font-size: 1em;
+  border-radius: 2em;
+  white-space: nowrap;
+}
+
+/* 7. Responsive grids */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+.services-grid > * {
+  flex: 1 1 250px;
+  min-width: 220px;
+  max-width: 100%;
+}
+
+/* 8. Responsive about section */
+.about-overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+.about-img,
+.about-text {
+  flex: 1 1 300px;
+  min-width: 220px;
+}
+
+/* 9. Responsive partners */
+.partners {
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+.partner {
+  flex: 1 1 120px;
+  min-width: 100px;
+  max-width: 180px;
+}
+
+/* 10. Responsive footer */
+footer .container {
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+footer .company-info,
+footer .contact-info,
+footer .working-hours {
+  flex: 1 1 250px;
+  min-width: 220px;
+  margin-bottom: 2em;
+}
+
+/* 11. Responsive form */
+form .form-row {
+  display: flex;
+  gap: 2vw;
+  flex-wrap: wrap;
+}
+form .form-row input,
+form .form-row textarea {
+  flex: 1 1 200px;
+  min-width: 120px;
+  margin-bottom: 1em;
+}
+
+/* 12. Responsive map/contact */
+.map {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+.map iframe {
+  flex: 2 1 300px;
+  min-width: 220px;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+.map .contact-info {
+  flex: 1 1 200px;
+  min-width: 180px;
+  margin-top: 1em;
+}
+
+/* 13. WhatsApp floating button */
+.whatsapp {
+  position: fixed;
+  bottom: 2vw;
+  left: 2vw;
+  z-index: 1000;
+  width: 3.75em;
+  height: 3.75em;
+}
+
+/* 14. Hero section */
+#hero {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+.hero-content {
+  padding: 4vw 0;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+/* 15. Media Queries */
+
+/* Tablets (≤ 992px) */
+@media (max-width: 992px) {
+  .about-overview,
+  .about-values {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .about-text,
+  .about-values,
+  .our-vision,
+  .our-values {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .about-img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 1.5em auto;
+    box-sizing: border-box;
+  }
+  .about-title,
+  .about-content {
+    text-align: center;
+  }
+  nav ul {
+    gap: 1vw;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .services-grid > * {
+    flex: 1 1 45%;
+    min-width: 180px;
+  }
+  .bottom-header,
+  .top-header {
+    display: none;
+  }
+  #about .about-img .back-bg {
+    background-color: #bebfa8;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 100%;
+    height: 105%;
+  }
+  #about .about-img .front-bg {
+    width: inherit;
+    top: 15px;
+    bottom: 0;
+  }
+  #about .about-overview {
+    gap: 2rem;
+  }
+  #about .about-values > * {
+    width: 40%;
+  }
+  #meeting .form-row > * {
+    flex: 0 1 100%;
+  }
+  #meeting .secondary-btn {
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  #meeting .partner-title {
+    margin-top: 3rem;
+  }
+  #contact .contact-info {
+    width: 75%;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  #services .bg-overlay {
+    filter: blur(4px);
+    opacity: 0.85;
+  }
+  #about .container {
+    padding: 0 4rem;
+  }
+  footer .working-hours .gap-2 {
+    justify-content: start;
+    gap: 2rem;
+  }
+  /* Navbar for small screens */
+  .navhiddin {
+    display: block;
+  }
+  .side-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  }
+  .s-header {
+    background-color: #bebfa8;
+    padding: 1rem 0;
+    box-shadow: 5px 1px 50px rgba(22, 40, 32, 0.5);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+  }
+  .modal {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1010;
+    background-color: rgba(22, 40, 32, 0.8);
+  }
+  .modal-hiddin {
+    display: none;
+  }
+  .sidebar {
+    background-color: #bebfa8;
+    height: inherit;
+    width: 85%;
+    box-shadow: 5px 1px 50px rgba(22, 40, 32, 0.5);
+  }
+  .sidebar ul {
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    gap: 2rem;
+  }
+  .sidebar .primary-btn {
+    border-radius: 0;
+    width: 50%;
+    text-align: center;
+  }
+  .sidebar li {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+  .sidebar li.active {
+    background-color: #fff;
+  }
+}
+
+/* Mobiles (≤ 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 4vw;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: flex-start;
+  }
+  .bottom-header .banner {
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-start;
+  }
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .services-grid > * {
+    flex: 1 1 100%;
+    min-width: 120px;
+  }
+  .about-overview {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  }
+  .about-img,
+  .about-text {
+    min-width: 0;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .about-title,
+  .about-content {
+    text-align: center;
+  }
+  .about-values {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  }
+  .our-vision,
+  .our-values {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  #services .bg-overlay {
+    filter: blur(4px);
+    opacity: 0.85;
+    /* Optional: make sure overlay covers the section */
+    /* width: 100%; */
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+  #services {
+    position: relative;
+    overflow: hidden;
+  }
+  #contact .map {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5em;
+  }
+  #contact .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2em;
+    margin-top: 1em;
+    background: var(--secondary-color);
+    border-radius: 1em;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    padding: 1.2em 0.5em;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #contact .contact-info .contact {
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+    background: var(--secondary-color);
+    /* border-radius: 0.7em; */
+    padding: 0.7em 1em;
+    /* width: 100%; */
+    box-sizing: border-box;
+  }
+  #contact .contact-info .contact i {
+    min-width: 32px;
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.5em;
+  }
+  #contact .contact-info .contact h3 {
+    margin: 0 0.5em 0 0;
+    font-size: 1em;
+    font-weight: bold;
+    color: #222;
+    white-space: nowrap;
+  }
+  #contact .contact-info .contact a {
+    font-size: 0.98em;
+    color: #444;
+    text-decoration: none;
+    word-break: break-all;
+    margin-right: auto;
+  }
+  #meeting form,
+  #meeting .container form {
+    width: 100%;
+    max-width: 100%;
+  }
+  #meeting form .form-row,
+  #meeting .container form .form-row {
+    flex-direction: column;
+    gap: 1em;
+  }
+  #meeting form input,
+  #meeting form textarea,
+  #meeting .container form input,
+  #meeting .container form textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0;
+    box-sizing: border-box;
+    display: block;
+  }
+  #meeting form textarea,
+  #meeting .container form textarea {
+    min-height: 120px;
+    /* You can adjust this value as needed */
+    resize: vertical;
+  }
+  .form-row input {
+    width: 100% !important;
+  }
+}
+
+/* Small Mobiles (≤ 480px) */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  .container {
+    padding: 0 2vw;
+  }
+  .hero-content h1 {
+    font-size: 1.1rem;
+  }
+  .primary-btn,
+  .secondary-btn {
+    font-size: 0.95em;
+    padding: 0.5em 1.2em;
+  }
+  .map iframe {
+    aspect-ratio: 16/10;
+  }
+  .footer .company-info,
+  .footer .contact-info,
+  .footer .working-hours {
+    min-width: 100px;
+    margin-bottom: 1em;
+  }
+  .partners {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.5em;
+  }
+  .partner {
+    flex: 1 1 100%;
+    min-width: 0;
+    max-width: 90vw;
+    width: 100%;
+    margin-bottom: 0.5em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .partner img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
+  }
+  .about-text,
+  .about-values,
+  .our-vision,
+  .our-values {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 1vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .about-img {
+    width: 100%;
+    max-width: 98vw;
+    margin: 0 auto 1em auto;
+    box-sizing: border-box;
+  }
+  .about-title,
+  .about-content {
+    text-align: center;
+  }
+  #contact,
+  .contact-info {
+    margin: 0 20px;
+  }
+}
+
+/* Hide sticky banner on mobile if needed */
+@media (max-width: 600px) {
+  .sticky-banner {
+    display: none !important;
+  }
+}
+
 /* Small devices */
 @media screen and (max-width: 576px) {
   #hero .top-header {
@@ -10,4 +602,155 @@
   #hero .bottom-header .primary-btn {
     display: none;
   }
+  .bottom-header {
+    display: none !important;
+  }
+  .h-md {
+    font-size: 3rem;
+  }
+  #about .about-img .back-bg {
+    left: 15%;
+    width: 50%;
+    height: 90%;
+  }
+  #about .about-overview,
+  #about .about-values {
+    gap: 3rem;
+  }
+  #about .about-content {
+    text-align: justify;
+    padding: 0 1rem;
+  }
+  #about .icon-box {
+    top: 5rem;
+    right: -3rem;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem;
+  }
+  #about .our-vision p,
+  #about .our-values p {
+    text-align: justify;
+  }
+  #contact .contact-info > *:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.315);
+    padding-bottom: 2rem;
+  }
+  #contact .contact-info .contact:not(:first-child) {
+    padding-top: 1rem;
+  }
+  #contact .contact-info,
+  #contact .contact-info .contact {
+    gap: 0;
+  }
+  #meeting form textarea,
+  #meeting .container form textarea {
+    min-height: 200px;
+  }
+  #meeting .secondary-btn {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+  }
+  #about .about-img .back-bg {
+    left: 5%;
+    width: 80%;
+    height: 105%;
+  }
+}
+
+footer h3 {
+  margin-bottom: 1rem;
+}
+.whatsapp {
+  bottom: 70px;
+  width: 4rem;
+}
+
+/* About section image improvements */
+.about-img {
+  width: 100% !important;
+  max-width: 100%;
+  margin: 0 auto 1.5em auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 180px;
+}
+
+.about-img img,
+.about-img .back-bg,
+.about-img .front-bg {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  border-radius: 1em;
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .about-img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 1.5em auto;
+    min-height: 160px;
+  }
+  .about-img img,
+  .about-img .back-bg,
+  .about-img .front-bg {
+    max-width: 350px;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 1em auto;
+    min-height: 140px;
+  }
+  .about-img img,
+  .about-img .back-bg,
+  .about-img .front-bg {
+    max-width: 320px;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-img {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto 1em auto;
+    min-height: 120px;
+  }
+  .about-img img,
+  .about-img .back-bg,
+  .about-img .front-bg {
+    max-width: 98vw;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* Center the law icon image in the about section */
+.about-title img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+/* Optionally, center the whole about-title content on all screens */
+.about-title {
+  text-align: center;
 }

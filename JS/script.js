@@ -2,6 +2,10 @@
 const firstGrid = document.getElementById("firstGrid");
 const secondGrid = document.getElementById("secondGrid");
 const thirdGrid = document.getElementById("thirdGrid");
+const closeMenu = document.getElementById("close-menu");
+const modal = document.getElementById("modal");
+const burgerMEnu = document.getElementById("burger-menu");
+const sideList = document.getElementById("side-list");
 
 const firstServices = [
   { imgSrc: "./images/raw1-1.svg", serviceName: "الترافع" },
@@ -110,4 +114,17 @@ document.addEventListener("DOMContentLoaded", function () {
       bottomHeader.style.top = "40px";
     }
   });
+});
+// Navbar for small screens
+closeMenu.addEventListener("click", () => {
+  modal.classList.add("modal-hiddin");
+  console.log("clicked");
+});
+burgerMEnu.addEventListener("click", () => {
+  modal.classList.remove("modal-hiddin");
+  console.log("clicked");
+});
+sideList.addEventListener("click", () => {
+  modal.classList.add("modal-hiddin");
+  console.log("clicked");
 });
