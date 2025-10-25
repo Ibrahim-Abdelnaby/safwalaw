@@ -205,6 +205,9 @@ form .form-row textarea {
 
 /* Tablets (≤ 992px) */
 @media (max-width: 992px) {
+  #hero .btns {
+    flex-direction: column;
+  }
   .about-overview,
   .about-values {
     flex-direction: column;
