@@ -309,3 +309,6 @@ footer .working-hours .left > *:not(:last-child) {
   top: 0;
   width: 100%;
 }
+.mohariki {
+  max-width: 80%;
+}
