@@ -312,3 +312,12 @@ footer .working-hours .left > *:not(:last-child) {
 .mohariki {
   max-width: 80%;
 }
+#close-menu {
+  padding-left: 0.5rem;
+}
+#modal .logo {
+  padding-right: 0.5rem;
+}
+.mr-3 {
+  margin-right: 0.5rem;
+}
