@@ -291,7 +291,7 @@ form .form-row textarea {
     opacity: 0.85;
   }
   #about .container {
-    padding: 0 4rem;
+    padding: 0 1rem;
   }
   footer .working-hours .gap-2 {
     justify-content: start;
@@ -624,7 +624,7 @@ form .form-row textarea {
     gap: 3rem;
   }
   #about .about-content {
-    text-align: justify;
+    /* text-align: justify; */
     padding: 0 1rem;
   }
   #about .icon-box {
