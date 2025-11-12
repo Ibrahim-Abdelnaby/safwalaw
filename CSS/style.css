@@ -321,3 +321,35 @@ footer .working-hours .left > *:not(:last-child) {
 .mr-3 {
   margin-right: 0.5rem;
 }
+
+#success-message {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  background-color: rgba(22, 40, 32, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+#success-message .modal {
+  background-color: var(--secondary-color);
+  width: 500px;
+  height: 250px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+#close-modal {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}

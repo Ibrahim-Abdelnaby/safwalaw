@@ -128,3 +128,28 @@ sideList.addEventListener("click", () => {
   modal.classList.add("modal-hiddin");
   console.log("clicked");
 });
+
+// contact form
+const form = document.getElementById("contact-form");
+const successMsg = document.getElementById("success-message");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault(); // يمنع إعادة تحميل الصفحة
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: new FormData(form),
+    headers: { Accept: "application/json" },
+  });
+  if (response.ok) {
+    form.reset();
+    successMsg.style.display = "flex"; // يعرض رسالة نجاح
+  } else {
+    alert("حدث خطأ أثناء الإرسال. حاول مرة أخرى لاحقًا.");
+  }
+});
+
+// close modal
+const closeModal = document.getElementById("close-modal");
+closeModal.addEventListener("click", () => {
+  successMsg.style.display = "none";
+});
